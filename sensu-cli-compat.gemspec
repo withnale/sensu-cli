@@ -1,22 +1,23 @@
 require File.join(File.dirname(__FILE__), 'lib', 'sensu-cli', 'version')
 
 Gem::Specification.new do |s|
-  s.name        = 'sensu-cli'
+  s.name        = 'sensu-cli-compat'
   s.version     = SensuCli::VERSION
   s.platform    = Gem::Platform::RUBY
   s.summary     = 'A command line utility for Sensu.'
   s.description = 'A command line utility for interacting with the Sensu api.'
-  s.authors     = ['Bryan Brandau']
-  s.email       = 'agent462@gmail.com'
+  s.authors     = ['Bryan Brandau', 'Rob Thomas']
+  s.email       = ['agent462@gmail.com', 'xrobau@gmail.com']
   s.has_rdoc    = false
   s.licenses    = %w(MIT APACHE)
-  s.homepage    = 'http://github.com/agent462/sensu-cli'
+  s.homepage    = 'http://github.com/xrobau/sensu-cli'
 
   s.add_dependency('rainbow', '1.99.2')
   s.add_dependency('trollop', '2.0')
   s.add_dependency('mixlib-config', '2.1.0')
   s.add_dependency('hirb', '0.7.1')
   s.add_dependency('erubis', '2.7.0')
+  s.add_dependency('json', '1.8.1')
 
   s.add_development_dependency('rspec')
   s.add_development_dependency('rubocop')
